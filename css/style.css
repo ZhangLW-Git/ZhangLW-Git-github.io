@@ -1,0 +1,23 @@
+body {background-color: #aed1e8}
+
+p.titletext {color: white;
+            font: 35px 黑体;}
+
+p.text {color: white;
+       font: 20px 楷体;}
+
+div.centertext {border-radius: 30px;
+                background-color: rgba(0,0,0,0.2);
+                width: 60%;
+                margin: auto;}
+
+div.table {border-radius: 25px;
+        background-color: rgba(226, 237, 202, 0.4);
+        width: 90%;
+        margin: auto;"}
+
+div.under {height: 20px;}
+
+#foot {padding: 60px;
+       text-align: center;}
+
