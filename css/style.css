@@ -1,18 +1,25 @@
 body {background-color: #aed1e8}
 
-p.titletext {color: white;
+p.titletext {color: black;
             font: 35px 黑体;}
 
-p.text {color: white;
-       font: 20px 楷体;}
+p.text {color: black;
+       font: 20px 楷体;
+       font-weight: 500;}
+
+p.textpython {color: white;
+              font: 15px 黑体；}
 
 div.centertext {border-radius: 30px;
                 background-color: rgba(0,0,0,0.2);
                 width: 60%;
                 margin: auto;}
 
+div.tablepython {background-color: rgba(79, 81, 84, 0.9);
+                width: 90%;
+                margin: auto;"}
+
 div.table {border-radius: 25px;
-        background-color: rgba(226, 237, 202, 0.4);
         width: 90%;
         margin: auto;"}
 

@@ -1,42 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ZhangLW</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" >
+    <title>不吃草的兔子和他的python</title>
+    <meta http-equiv="content-type" content="python&爬虫" charset=UTF-8" >
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <div class="centertext">
-        <div  style="text-align: center;
-                     height: 30px;" >
-            <p class="titletext"> ZhangLW的日记</p>
-        </div>
-
+            <p class="titletext"> &nbsp;分析英语文本最多单词数</p>
         <div  class="table">
            <div style="width: 90%;
                         height: 90%;
                         margin: auto;">
-               <p class="text">
-                   <strong>3月27日</strong><br/>&nbsp;&nbsp;&nbsp;昨天小云儿很生气，我能感觉到她真的很不开心，可能和这几天她家庭环境有关系吧！我也觉得自己好搞笑，什么事有这么能让你这么久不理她,对于别人来说一个半小时很快就过去，但是现在你是她的一部分精神依靠，要每时每刻让她感觉你在她身边。<br/>&nbsp;&nbsp;&nbsp;ZhangLW就是个猪，你就知道事后清晰，发生的时候怎么想不到。
-               </p>
+               <p class="text">本代码是按照小白的生活逻辑思维，若使用“字典”思想会更加方便。<br/>不多说，上代码：</p>
            </div>
-       </div>
 
-        <div class="under"></div>
+            <div class="tablepython">
+                 <div style="width: 70%;
+                        margin: auto;">
+                     <br/>
+                   <p class="textpython">
+                   text = open("abc.txt").readlines()<br/>
+                   &nbsp;&nbsp;&nbsp;&nbsp;lineall = ""<br/>
+                   for line in text:<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;lineall += line    #输出信息<br/><br/>
 
-        <div  class="table">
-           <div style="width: 90%;
+                    lettertable = []<br/>
+                    for i in range(65,91):<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;lettertable.append(chr(i))<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;j = i-65+97<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;lettertable.append(chr(j))<br/>
+                    lettertable.append(["'", "-"])   &nbsp;&nbsp;&nbsp;&nbsp;#字母表<br/><br/>
+
+                    words = []<br/>
+                    word = ""<br/>
+                    for letter in lineall:<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;if letter in lettertable:<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;word += letter<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;else :<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if word != "":<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;words.append(word)<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;word = ""         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;             #存储单词<br/><br/>
+
+                    k = 0<br/>
+                    for i in words:<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;for j in words:<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if words.count(i) >= words.count(j):<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k += 1<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if k == len(words):<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(i, words.count(i))             #记数<br/>
+                   </p>
+                     <br/>
+                 </div>
+           </div>
+            <div style="width: 90%;
                         height: 90%;
                         margin: auto;">
-               <p class="text">
-                   <strong>3月26日</strong><br/>&nbsp;&nbsp;&nbsp;小云儿说她苗条，其实我一直一直这么觉得。<br/>&nbsp;&nbsp;&nbsp;小云儿老师上的课还不错。今天阳光不错，想出去，可早晨的课程真是难受，直到中午看看天空的“烈焰”还是算了。
-               </p>
-           </div>
+               <p class="text">上述代码可提取同目录下“abc.txt”内的消息，并计算出现最多的单词，并记数。学习python最好的是自己多思考多敲击代码。<br/>Good Luck!</p>
+            </div>
        </div>
-        <div style="height: 20px;"></div>
+
+        <div style="height: 20px"></div>
+
     </div>
     <div id="foot" style="text-align:center;">
-        <p  color="black" size="10"><strong>@作者ZhangLW-更新日期2020年3月27<br/>QQ:24953574393&nbsp;&nbsp;&nbsp;&nbsp;邮箱：zhanglwxxy@gmail.com</strong></p>
+        <p  color="black" size="10"><strong>@作者ZhangLW&nbsp;更新日期2020年3月27<br/>QQ:24953574393&nbsp;&nbsp;&nbsp;&nbsp;邮箱：zhanglwxxy@gmail.com</strong></p>
     </div>
 
 
