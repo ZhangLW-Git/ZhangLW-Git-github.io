@@ -1,0 +1,93 @@
+body {
+    background: #aed1e8;
+    width:800px;
+    height:101%;
+    }
+p.titletext {
+    color: white;
+    font: 35px 黑体;
+    text-shadow: 5px 5px 5px #FF0000;
+}
+p.text {
+    color: #4c5052;
+    font: 18px Arial;
+}
+pre.tet {
+    color: #ffffff;
+    font: 14px Arial;
+}
+p.directyear {
+    color: rgb(0, 0, 0);
+    font: 25px 黑体;
+}
+p.directmonth {
+    color: rgb(0, 0, 0);
+    font: 15px 宋体;
+}
+
+div.centertext {
+    border-radius: 30px;
+    background-color: rgba(0,0,0,0.2);
+    width: 60%;
+    margin: auto;
+    position:absolute;
+    left:180px;
+    top:20px;
+    min-width: 700px;
+}
+div.table {
+    border-radius: 25px;
+    background-color: rgba(226, 237, 202, 0.8);
+    width: 90%;
+    margin: auto;
+    box-shadow: 10px 10px 5px #888888;
+    position:static;
+}
+
+
+div.foot {
+    position: absolute;
+    bottom: -80px;
+    left: 25%;
+    text-align: center;
+    margin: auto;
+}
+
+div.direct {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0px 25px 25px 0px;
+    border: 1px solid #2b3c41;
+    position: absolute;
+    left: 0px;
+    top: 180px;
+    width: 150px;
+    text-align: center;
+}
+div.directtext {
+    cursor: pointer;
+    border-radius: 15px 15px 0px 0px;
+    border-top: 2px solid #fcb6b6;
+    margin: auto;    
+    text-align: center;
+}
+
+
+div.contop {position: static;
+    width: 90%;
+    min-width:500px;
+    margin: auto;
+}
+div.conimg {position: static;
+    width: 90%;
+    min-width:500px;
+    margin: auto;}
+
+
+div.ourphoto{
+    float: left;
+    cursor: pointer;
+    transition: all 1s;
+}
+div.ourphoto:hover {
+    transform: scale(3);
+}
