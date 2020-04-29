@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset='UTF-8'>
+		<meta name='viewport' http-equiv="content-type" content="width=device-width initial-scale=1; charset=UTF-8">
+		<title>兔子与python</title>
+		<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet'
+		 type='text/css' />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	</head>
+	<body class='typora-export os-windows'>
+			
+		<!-- 左导航栏 -->
+		<div id='left-direct' style="float: left;">
+			<div  id='write'  class = 'is-node'><p><strong><span>2020代码导航</span></strong></p><hr /><ul><li><span>4.26 </span><a href='2020426.html'><span>记事本中的 python 逻辑</span></a></li><li><span>4.29 </span><a href='2020429.html'><span>爬取高清图片</span></a></li></ul><hr /><p>&nbsp;</p></div>
+		</div>
+		
+		<!-- 中间位置 -->
+		<div id='centre'>
+			<div id='write' class='is-node'>
+				<h2><a name="不吃草的兔子" class="md-header-anchor"></a><strong><span>不吃草的兔子</span></strong></h2>
+
+				<!-- 预留部分-->
+
+
+
+				<p><strong><span>4月26</span></strong><span> </span></p>
+				<p><em><span>记事本中的 python 逻辑</span></em></p>
+				<p><span>我觉得编程语音是一种神奇的东西，尤其是我学习了python后感觉世界变得神奇，所以我将用GitHub来记录我学习python的每个代码。</span></p>
+				<p><span>今天分享的是一个文本分析代码，这个代码可以分析同目录下 </span><a href='resources/4.26/abc.txt'><span>abc.txt(点击下载该文件)</span></a><span>内的出现最多次数的单词，这其实不是简单的写法，用字典函数比较简单的，但用列表和字符串记录有助于锻炼思维。接下来看代码吧！该代码源文件点击下载：</span><a href='resources/4.26/WordMAX.py'><span>WordMAX.py</span></a><span>.</span></p>
+				<pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang="#WordMAx.py"
+				 style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="#wordmax.py"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 44px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 36px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>31</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -36px; width: 36px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -36px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 27px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">text = open("abc.txt").readlines()</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">2</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">3</div>
+				</div>
+				<pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">lineall = ""</span></pre>
+			</div>
+			<div style="position: relative;" class="">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">4</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">for line in text:</span></pre>
+			</div>
+			<div class="" style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">5</div>
+				</div>
+				<pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>lineall += line &nbsp;  #输出信息</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">6</div>
+				</div>
+				<pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">7</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lettertable = []</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">8</div>
+				</div>
+				<pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">for i in range(65,91):</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 27px;">9</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  lettertable.append(chr(i))</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">10</div>
+				</div>
+				<pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  j = i-65+97</span></pre>
+			</div>
+			<div class="" style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">11</div>
+				</div>
+				<pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  lettertable.append(chr(j))</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">12</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">lettertable.append(["'", "-"]) &nbsp; &nbsp; #字母表</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">13</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">14</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">words = []</span></pre>
+			</div>
+			<div style="position: relative;" class="">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">15</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">word = ""</span></pre>
+			</div>
+			<div style="position: relative;" class="">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">16</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">for letter in lineall:</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">17</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  if letter in lettertable:</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">18</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  word += letter</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 27px;">19</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  else :</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">20</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  if word != "":</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">21</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  words.append(word)</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">22</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  word = "" &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  #存储单词</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">23</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">24</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">k = 0</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">25</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">for i in words:</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">26</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  for j in words:</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">27</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  if words.count(i) &gt;= words.count(j):</span></pre>
+			</div>
+			<div style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 27px;">28</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  k += 1</span></pre>
+			</div>
+			<div style="position: relative;" class="">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 27px;">29</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  if k == len(words):</span></pre>
+			</div>
+			<div class="" style="position: relative;">
+				<div class="CodeMirror-gutter-wrapper" style="left: -36px;">
+					<div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 27px;">30</div>
+				</div>
+				<pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  print(i, words.count(i)) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; #记数</span></pre>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			<div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 690px;"></div>
+			<div class="CodeMirror-gutters" style="height: 690px;">
+				<div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 35px;"></div>
+			</div>
+			</div>
+			</div>
+			</pre>
+			<p><span>运行结果：</span></p>
+			<p><img src="resources/4.26/WordMAX.png" alt="WordMAX.py" style="zoom:80%;" /></p>
+			<p><span>由显示可以看出来在我自己的 </span><code>data.txt</code><span> 中出现次数最多的单词是“the”, 总共出现13次，但是这是不正确的，因为python区分大小写，也即是它认为</span><code>The</code><span>与</span><code>the</code><span>不是同一个，所以有待改进。</span></p>
+			<p><span>今天就到这里，我就会不定期更新哟！bye~~</span></p>
+			<p><strong><span>兔子出品必属精品</span></strong></p>
+			</div>
+		</div>
+		
+	</body>
+</html>
